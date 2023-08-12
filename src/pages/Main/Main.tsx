@@ -1,5 +1,4 @@
 import axios from "axios";
-import Header from "../../components/Header/Header";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 
@@ -36,14 +35,13 @@ export const Main = () => {
   const webtoonThird = webtoonList.slice((webtoonList.length / 3) * 2);
 
   gsap.defaults({ play: true });
-  gsap.fromTo(firstRef.current, { x: 900, duration: 25, yoyo: true, repeat: -1, ease: "sine-out" }, { x: -900, duration: 25, yoyo: true, repeat: -1, ease: "sine-out" });
-  gsap.fromTo(secondRef.current, { x: -900, duration: 30, yoyo: true, repeat: -1, ease: "sine-out" }, { x: 900, duration: 30, yoyo: true, repeat: -1, ease: "sine-out" });
-  gsap.fromTo(thirdRef.current, { x: 900, duration: 30, yoyo: true, repeat: -1, ease: "sine-out" }, { x: -900, duration: 30, yoyo: true, repeat: -1, ease: "sine-out" });
+  gsap.fromTo(firstRef.current, { x: 0, duration: 40, yoyo: true, repeat: -1, ease: "sine-inout" }, { x: -900, duration: 40, yoyo: true, repeat: -1, ease: "sine-inout" });
+  gsap.fromTo(secondRef.current, { x: 0, duration: 50, yoyo: true, repeat: -1, ease: "sine-inout" }, { x: 900, duration: 50, yoyo: true, repeat: -1, ease: "sine-inout" });
+  gsap.fromTo(thirdRef.current, { x: 0, duration: 50, yoyo: true, repeat: -1, ease: "sine-inout" }, { x: -900, duration: 50, yoyo: true, repeat: -1, ease: "sine-inout" });
 
   return (
-    <div className="w-full h-screen bg-black">
-      {/* <Header /> */}
-      <ul className="flex flex-col gap-5 items-center justify-center opacity-50 shadow-xl">
+    <div className="h-screen bg-black">
+      <ul className="flex flex-col gap-5 items-center justify-center opacity-40 shadow-xl">
         <div className="flex gap-3" ref={firstRef}>
           {webtoonFirst.map(({ webtoonId, img, title }) => (
             <li key={webtoonId} className="w-52 h-60">

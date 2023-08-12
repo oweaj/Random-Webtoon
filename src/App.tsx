@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/main" element={<Main />} />
