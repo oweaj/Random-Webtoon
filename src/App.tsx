@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
-import Main from "./pages/Main/Main";
-import { NaverWebtoon } from "./components/NaverWebtoon/NaverWebtoon";
+import { Main } from "./pages/Main/Main";
+import NaverWebtoon from "./components/NaverWebtoon/NaverWebtoon";
 import KakaoWebtoon from "./components/KakaoWebtoon/KakaoWebtoon";
 import NotFound from "./pages/NotFound/NotFound";
 
