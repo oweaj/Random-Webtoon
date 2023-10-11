@@ -17,7 +17,6 @@ const useFetch = () => {
     try {
       const url = `https://korea-webtoon-api.herokuapp.com?${type}`;
       const response = await axios.get(url);
-      console.log(response);
       setStatus(response.status);
       setWebtoonList(response.data.webtoons);
     } catch (error) {
@@ -25,7 +24,7 @@ const useFetch = () => {
     }
   };
 
-  return { webtoons, status, webtoonList };
+  return { webtoons, webtoonList, status };
 };
 
 export default useFetch;
