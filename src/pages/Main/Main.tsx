@@ -24,24 +24,24 @@ export const Main = () => {
 
   return (
     <div className="h-screen bg-black">
-      <ul className="h-full flexCenter flex-col gap-4 opacity-40">
-        <div className="flex gap-3" ref={firstRef}>
+      <ul className="h-full flexCenter flex-col gap-4 opacity-40 py-6">
+        <div className="h-1/3 flex items-center gap-3" ref={firstRef}>
           {webtoonFirst.map(({ webtoonId, img, title }) => (
-            <li key={webtoonId} className="w-52 h-60">
-              <img src={img} className="w-full h-full rounded-lg" alt={title} />
+            <li key={webtoonId} className="w-56 h-full">
+              <img src={img} className="w-full h-full wrounded-lg" alt={title} />
             </li>
           ))}
         </div>
-        <div className="flex gap-3" ref={secondRef}>
+        <div className="h-1/3 flex items-center gap-3" ref={secondRef}>
           {webtoonSecond.map(({ webtoonId, img, title }) => (
-            <li key={webtoonId} className="w-52 h-60">
+            <li key={webtoonId} className="w-56 h-full">
               <img src={img} className="w-full h-full rounded-lg" alt={title} />
             </li>
           ))}
         </div>
-        <div className="flex gap-3" ref={thirdRef}>
+        <div className="h-1/3 flex items-center gap-3" ref={thirdRef}>
           {webtoonThird.map(({ webtoonId, img, title }) => (
-            <li key={webtoonId} className="w-52 h-60">
+            <li key={webtoonId} className="w-56 h-full">
               <img src={img} className="w-full h-full rounded-lg" alt={title} />
             </li>
           ))}
