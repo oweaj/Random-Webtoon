@@ -3,7 +3,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 const override: CSSProperties = {
   display: "block",
-  borderColor: "#ea8e16",
+  borderColor: "#ffffff",
 };
 
 const Spinner = () => {

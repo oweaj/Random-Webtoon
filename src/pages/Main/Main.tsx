@@ -10,7 +10,7 @@ export const Main = () => {
   const { webtoons, webtoonList } = useFetch();
 
   useEffect(() => {
-    webtoons("perPage=60");
+    webtoons("perPage=90");
   }, []);
 
   const webtoonFirst = webtoonList.slice(0, webtoonList.length / 3);
@@ -24,7 +24,6 @@ export const Main = () => {
 
   return (
     <div className="h-screen bg-black">
-      <WebtoonBox />
       <ul className="h-full flexCenter flex-col gap-4 opacity-40">
         <div className="flex gap-3" ref={firstRef}>
           {webtoonFirst.map(({ webtoonId, img, title }) => (
@@ -48,7 +47,7 @@ export const Main = () => {
           ))}
         </div>
       </ul>
-      <div className="h-full"></div>
+      <WebtoonBox />
     </div>
   );
 };
