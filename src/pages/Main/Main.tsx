@@ -28,7 +28,7 @@ export const Main = () => {
         <div className="h-1/3 flex items-center gap-3" ref={firstRef}>
           {webtoonFirst.map(({ webtoonId, img, title }) => (
             <li key={webtoonId} className="w-56 h-full">
-              <img src={img} className="w-full h-full wrounded-lg" alt={title} />
+              <img src={img} className="w-full h-full rounded-lg" alt={title} />
             </li>
           ))}
         </div>
