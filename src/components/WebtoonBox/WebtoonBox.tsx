@@ -30,12 +30,10 @@ const WebtoonBox = () => {
     return selectedId[typeIndex] === contentIndex ? "bg-orange-400 text-white" : "bg-gray-400";
   };
 
-  const handleRandomClick = () => {
+  const handleRandomClick = async () => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      webtoons(`perPage=2&page=${randomPage}&service=${selectedName[0].toLowerCase()}&updateDay=${selectedName[1].toLowerCase()}`);
-    }, 800);
+    await webtoons(`perPage=2&page=${randomPage}&service=${selectedName[0].toLowerCase()}&updateDay=${selectedName[1].toLowerCase()}`);
+    setLoading(false);
   };
 
   return (
